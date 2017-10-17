@@ -1,0 +1,16 @@
+extends layout
+ 
+block content
+    h1= title
+    form(name="add-estimation", method="post")
+        div.input
+            span.label Question
+            input(type="text", name="question")
+        div.input
+            span.label Answer 
+            textarea(name="answer", cols="80", rows="20")
+        div.input
+            span.label Author
+            input(type="text", name="author")
+        div.actions
+            input(type="submit", value="add")
