@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
     "dev-client": "cd client && yarn start",
-    "dev-server": "DEBUG=qbank:* nodemon ./bin/www"
+    "dev-server": "DEBUG=qbank:* & nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
