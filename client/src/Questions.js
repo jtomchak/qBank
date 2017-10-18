@@ -4,7 +4,7 @@ import { getQuestions } from "./question.service";
 class Questions extends Component {
   state = {};
   componentWillMount() {
-    getQuestions
+    getQuestions()
       .then(res => res.json())
       .then(payload => this.setState({ questions: payload }));
   }
@@ -14,7 +14,7 @@ class Questions extends Component {
     }
     return (
       <div>
-        <ul>{this.state.questions.map(q => <li>q.question</li>)}</ul>
+        <ul>{this.state.questions.map(q => <li>{q.question}</li>)}</ul>
       </div>
     );
   }
